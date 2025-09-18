@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none; /* For Webkit browsers */
+  -moz-appearance: none; /* For Mozilla browsers */
+  appearance: none;
+}
+
+.header {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 1);
+  width: 100vw;
+}
+
+.header__color-picker {
+}
+
+.header__color-scheme {
+}
+
+.header__color-select-btn {
+}
