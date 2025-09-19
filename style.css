@@ -9,6 +9,7 @@
 body {
   height: 100vh;
   font-family: "Inter", sans-serif;
+  /* max-height: 550px; */
 }
 
 button {
@@ -24,16 +25,71 @@ button {
 }
 
 .header {
-  padding: 2rem;
   background-color: rgba(255, 255, 255, 1);
   width: 100vw;
+  height: 90px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .header__color-picker {
+  width: 60px;
+  height: 42px;
+  border: 0.5px solid rgba(209, 213, 219, 1);
+  border-radius: 4px;
 }
 
 .header__color-scheme {
+  width: 312px;
+  height: 42px;
+  font-size: 16px;
+  border: 1px solid rgba(209, 213, 219, 1);
+  border-radius: 4px;
+  padding: 9px 37px 9px 13px;
 }
 
 .header__color-select-btn {
+  width: 123px;
+  height: 42px;
+  font-size: 12px;
+  border: 1px solid rgba(209, 213, 219, 1);
+  border-radius: 4px;
+}
+
+.main,
+.footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.color {
+  min-height: 414px;
+  font-size: 12px;
+}
+
+.red {
+  background-color: red;
+}
+.orange {
+  background-color: orange;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.footer {
+}
+
+.hex-code {
+  font-size: 12px;
+  text-align: center;
+  margin: 11px 0;
 }
