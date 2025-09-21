@@ -66,23 +66,7 @@ button {
 .color {
   min-height: 414px;
   font-size: 12px;
-}
-
-.red {
-  background-color: red;
-}
-.orange {
-  background-color: orange;
-}
-.yellow {
-  background-color: yellow;
-}
-.green {
-  background-color: green;
-}
-
-.blue {
-  background-color: blue;
+  text-align: center;
 }
 
 .footer {
