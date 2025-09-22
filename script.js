@@ -11,16 +11,37 @@ document.addEventListener("click", (e) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(colorSchemeSelection);
         main.innerHTML = "";
+        footer.innerHTML = "";
         data.colors.forEach((color) => {
           const div = document.createElement("div");
           div.classList.add("color");
           div.style.backgroundColor = color.hex.value;
+
+          div.addEventListener("click", () => {
+            navigator.clipboard.writeText(color.hex.value);
+            const copyToClipboard = document.querySelector(".copied-message");
+            copyToClipboard.classList.remove("hidden");
+            setTimeout(function () {
+              copyToClipboard.classList.add("hidden");
+            }, 3000);
+          });
+
           main.appendChild(div);
+
           const pTag = document.createElement("p");
           pTag.classList.add("hex-code");
-          document.querySelector(".hex-code").innerHTML = color.hex.value;
+          pTag.textContent = color.hex.value;
+
+          pTag.addEventListener("click", () => {
+            navigator.clipboard.writeText(color.hex.value);
+            const copyToClipboard = document.querySelector(".copied-message");
+            copyToClipboard.classList.remove("hidden");
+            setTimeout(function () {
+              copyToClipboard.classList.add("hidden");
+            }, 3000);
+          });
+
           footer.appendChild(pTag);
         });
       });
